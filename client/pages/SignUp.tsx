@@ -94,7 +94,7 @@ export default function SignUp() {
           >
             {/* Sign Up Card */}
             <div
-              className="bg-white/[0.03] backdrop-blur-sm rounded-[33px] px-4 py-6 border border-brand-blue/30 relative w-full max-w-sm mx-auto animate-border-glow"
+              className="bg-white/[0.03] backdrop-blur-sm rounded-[33px] px-6 py-8 border border-brand-blue/30 relative w-full max-w-sm mx-auto animate-border-glow"
               style={{
                 background: "rgba(255, 255, 255, 0.03)",
                 border: "1px solid rgba(29, 146, 242, 0.4)",
@@ -104,89 +104,121 @@ export default function SignUp() {
             >
               {/* Logo */}
               <div className="flex justify-center mb-4">
-                <div className="w-14 h-14 rounded-full overflow-hidden">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/fc8cfca53adb66b3b9c9418de9b79a129b6ae610?placeholderIfAbsent=true"
-                    alt="Logo"
-                    className="w-full h-full object-cover"
-                  />
+                <div className="flex items-center gap-2">
+                  <div className="text-2xl">⭐</div>
+                  <span className="text-white text-xl font-bold">starz</span>
+                </div>
+              </div>
+
+              {/* Inspirational Text */}
+              <div className="text-center mb-2">
+                <div
+                  className="text-lg font-medium"
+                  style={{
+                    background: "linear-gradient(45deg, #8B5CF6, #3B82F6)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  Be Inspired by the Unexpected
                 </div>
               </div>
 
               {/* Disclaimer */}
-              <div className="text-center text-blue-200 text-[11px] mb-4">
+              <div className="text-center text-gray-400 text-[11px] mb-6">
                 Play responsibly, platform for over 18s only
               </div>
 
               {/* Name Field */}
               <div className="mb-4">
                 <button
-                  className="w-full border border-brand-blue rounded-full px-3 py-2 flex items-center gap-1.5 shadow-[0px_0px_2px_rgba(29,146,242,0.6)] hover:bg-brand-blue/10 transition-colors cursor-pointer"
+                  className="w-full border border-brand-blue rounded-full px-4 py-4 flex items-center justify-between shadow-[0px_0px_8px_rgba(29,146,242,0.4)] hover:bg-brand-blue/10 transition-colors cursor-pointer bg-black/20"
                   onClick={() => console.log("Name field clicked")}
                 >
-                  <span className="text-blue-100 text-sm font-medium">
+                  <span className="text-white text-sm font-medium">
                     Oliver Bennet
                   </span>
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/b3cfde06dc9eb024947ade00c1220a3109295328?placeholderIfAbsent=true"
-                    alt=""
-                    className="w-px h-6"
-                  />
+                  <div className="w-px h-4 bg-brand-blue/60"></div>
                 </button>
               </div>
 
               {/* Email Field */}
               <div className="mb-4">
                 <button
-                  className="w-full bg-transparent border-0 rounded-full px-4 py-3 flex items-center justify-start hover:bg-white/5 transition-colors cursor-pointer"
+                  className="w-full bg-black/30 border-0 rounded-full px-4 py-4 flex items-center justify-start hover:bg-black/40 transition-colors cursor-pointer"
                   onClick={() => console.log("Email field clicked")}
                 >
-                  <span className="text-blue-100 text-sm">Email Address</span>
+                  <span className="text-gray-400 text-sm">Email Address</span>
                 </button>
               </div>
 
               {/* Password Field */}
               <div className="mb-4">
                 <button
-                  className="w-full bg-transparent border-0 rounded-full px-4 py-3 flex items-center justify-between hover:bg-white/5 transition-colors cursor-pointer"
+                  className="w-full bg-black/30 border-0 rounded-full px-4 py-4 flex items-center justify-between hover:bg-black/40 transition-colors cursor-pointer"
                   onClick={() => console.log("Password field clicked")}
                 >
-                  <span className="text-blue-100 text-sm">Enter Password</span>
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/43a27eabf22d3e8627bd43ab35e3f7352c1704a7?placeholderIfAbsent=true"
-                    alt=""
-                    className="w-4 h-3 shadow-[0px_0px_7px_rgba(29,146,242,0.8)]"
-                  />
+                  <span className="text-gray-400 text-sm">Enter Password</span>
+                  <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center">
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
                 </button>
               </div>
 
               {/* CPF Field */}
               <div className="mb-7">
                 <button
-                  className="w-full bg-transparent border-0 rounded-full px-4 py-3 flex items-center justify-between hover:bg-white/5 transition-colors cursor-pointer"
+                  className="w-full bg-black/30 border-0 rounded-full px-4 py-4 flex items-center justify-between hover:bg-black/40 transition-colors cursor-pointer"
                   onClick={() => console.log("CPF field clicked")}
                 >
-                  <span className="text-blue-100 text-sm">CPF document</span>
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/04ca358fd0c7f01b89032ed5b420814422ef91a1?placeholderIfAbsent=true"
-                    alt=""
-                    className="w-[18px] h-4 shadow-[0px_0px_11px_rgba(29,146,242,0.7)]"
-                  />
+                  <span className="text-gray-400 text-sm">CPF document</span>
+                  <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center">
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
                 </button>
               </div>
 
-              {/* Privacy Policy Link */}
-              <div className="mb-6 px-4">
+              {/* Privacy Policy Checkbox */}
+              <div className="mb-6">
                 <button
-                  className="flex items-center space-x-1 hover:opacity-80 transition-opacity cursor-pointer"
+                  className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer"
                   onClick={() => console.log("Privacy Policy clicked")}
                 >
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/7e7708e344128f728ccdcfe7ac375d765c15755d?placeholderIfAbsent=true"
-                    alt=""
-                    className="w-4 h-4 shadow-[0px_0px_7px_rgba(29,146,242,1)]"
-                  />
-                  <span className="text-brand-blue text-xs">
+                  <div className="w-5 h-5 bg-brand-blue rounded-full flex items-center justify-center">
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-brand-blue text-sm">
                     Privacy Policy
                   </span>
                 </button>
@@ -207,17 +239,17 @@ export default function SignUp() {
 
               {/* Login Link */}
               <div className="text-center">
-                <span className="text-blue-200 text-xs">
+                <span className="text-gray-400 text-sm">
                   Already have an account?{" "}
                 </span>
                 <button
-                  className="text-brand-blue text-xs hover:opacity-80 transition-opacity cursor-pointer"
+                  className="text-brand-blue text-sm hover:opacity-80 transition-opacity cursor-pointer"
                   style={{
                     textShadow: "0px 0px 9px rgba(29, 146, 242, 0.8)",
                   }}
                   onClick={() => (window.location.href = "/")}
                 >
-                  Login
+                  Sign Up
                 </button>
               </div>
             </div>
