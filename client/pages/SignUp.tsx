@@ -249,7 +249,7 @@ export default function SignUp() {
                   }}
                   onClick={() => (window.location.href = "/")}
                 >
-                  Sign Up
+                  Login
                 </button>
               </div>
             </div>
