@@ -8,7 +8,7 @@ export default function Index() {
           {Array.from({ length: 50 }).map((_, i) => (
             <div
               key={i}
-              className="absolute w-1 h-1 bg-blue-400 rounded-full opacity-60"
+              className="absolute w-1 h-1 bg-blue-400 rounded-full animate-twinkle"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
@@ -19,9 +19,18 @@ export default function Index() {
         </div>
 
         {/* Geometric shapes */}
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 border border-brand-blue/30 rounded-lg transform rotate-45" />
-        <div className="absolute top-3/4 right-1/4 w-24 h-24 border border-brand-blue/20 rounded-lg transform -rotate-12" />
-        <div className="absolute bottom-1/4 left-1/3 w-40 h-40 border border-brand-blue/10 rounded-lg transform rotate-12" />
+        <div
+          className="absolute top-1/4 left-1/4 w-32 h-32 md:w-40 md:h-40 border border-brand-blue/30 rounded-lg animate-float"
+          style={{ animationDelay: "0s" }}
+        />
+        <div
+          className="absolute top-3/4 right-1/4 w-24 h-24 md:w-32 md:h-32 border border-brand-blue/20 rounded-lg animate-float"
+          style={{ animationDelay: "2s" }}
+        />
+        <div
+          className="absolute bottom-1/4 left-1/3 w-40 h-40 md:w-48 md:h-48 border border-brand-blue/10 rounded-lg animate-float"
+          style={{ animationDelay: "4s" }}
+        />
 
         {/* Blue triangular accent */}
         <div className="absolute top-1/3 right-8">
@@ -33,7 +42,7 @@ export default function Index() {
       </div>
 
       {/* Status Bar */}
-      <div className="relative z-10 flex justify-between items-center px-4 pt-3 pb-2">
+      <div className="relative z-10 flex justify-between items-center px-4 sm:px-6 pt-3 pb-2">
         <div className="text-white font-semibold text-base">9:41</div>
         <div className="flex items-center space-x-2">
           <div className="flex space-x-1">
@@ -63,8 +72,8 @@ export default function Index() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex-1 flex items-center justify-center px-10 py-20">
-        <div className="w-full max-w-sm">
+      <div className="relative z-10 flex-1 flex items-center justify-center px-6 sm:px-10 py-12 sm:py-20">
+        <div className="w-full max-w-sm mx-auto">
           {/* Login Card */}
           <div
             className="bg-white/[0.03] backdrop-blur-sm rounded-[33px] p-4 border border-white/10"
