@@ -84,9 +84,10 @@ export default function Index() {
           >
             {/* Login Card */}
             <div
-              className="bg-white/[0.03] backdrop-blur-sm rounded-[33px] px-4 py-6 border border-white/10 relative w-full max-w-sm mx-auto"
+              className="bg-white/[0.03] backdrop-blur-sm rounded-[33px] px-4 py-6 border border-brand-blue/30 relative w-full max-w-sm mx-auto animate-border-glow"
               style={{
                 background: "rgba(255, 255, 255, 0.03)",
+                border: "1px solid rgba(29, 146, 242, 0.4)",
               }}
             >
               {/* Logo */}
@@ -101,7 +102,7 @@ export default function Index() {
               </div>
 
               {/* Disclaimer */}
-              <div className="text-center text-white text-[11px] mb-4">
+              <div className="text-center text-blue-200 text-[11px] mb-4">
                 Play responsibly, platform for over 18s only
               </div>
 
@@ -111,7 +112,9 @@ export default function Index() {
                   className="w-full border border-brand-blue rounded-full px-3 py-2 flex items-center gap-1.5 shadow-[0px_0px_2px_rgba(29,146,242,0.6)] hover:bg-brand-blue/10 transition-colors cursor-pointer"
                   onClick={() => console.log("Hello button clicked")}
                 >
-                  <span className="text-white text-sm font-medium">hello!</span>
+                  <span className="text-blue-100 text-sm font-medium">
+                    hello!
+                  </span>
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/f76f2988ec98a5cb918a74260d7aa1698567d924?placeholderIfAbsent=true&apiKey=18dae956f5b2411b871a2e3e8076440d"
                     alt=""
@@ -126,7 +129,7 @@ export default function Index() {
                   className="w-full bg-transparent border-0 rounded-full px-4 py-3 flex items-center justify-between hover:bg-white/5 transition-colors cursor-pointer"
                   onClick={() => console.log("Password field clicked")}
                 >
-                  <span className="text-white text-sm">Enter password</span>
+                  <span className="text-blue-100 text-sm">Enter password</span>
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/d4cccd715ae1fb10fbb63c19a891e60a0dccd5e6?placeholderIfAbsent=true&apiKey=18dae956f5b2411b871a2e3e8076440d"
                     alt=""
@@ -149,7 +152,7 @@ export default function Index() {
                   <span className="text-brand-blue text-xs">Crisr account</span>
                 </button>
                 <button
-                  className="text-white text-xs hover:opacity-80 transition-opacity cursor-pointer"
+                  className="text-blue-200 text-xs hover:opacity-80 transition-opacity cursor-pointer"
                   onClick={() => console.log("Forgot password clicked")}
                 >
                   Forgot password?
@@ -171,7 +174,7 @@ export default function Index() {
 
               {/* Sign Up Link */}
               <div className="text-center">
-                <span className="text-white text-xs">
+                <span className="text-blue-200 text-xs">
                   Don't have an account?{" "}
                 </span>
                 <button

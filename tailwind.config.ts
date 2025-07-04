@@ -104,6 +104,20 @@ export default {
             boxShadow: "0 0 20px rgba(29, 146, 242, 0.8)",
           },
         },
+        "border-glow": {
+          "0%": {
+            boxShadow:
+              "0 0 20px rgba(29, 146, 242, 0.3), 0 0 40px rgba(29, 146, 242, 0.1), inset 0 0 20px rgba(29, 146, 242, 0.05)",
+          },
+          "50%": {
+            boxShadow:
+              "0 0 30px rgba(29, 146, 242, 0.5), 0 0 60px rgba(29, 146, 242, 0.2), inset 0 0 30px rgba(29, 146, 242, 0.1)",
+          },
+          "100%": {
+            boxShadow:
+              "0 0 20px rgba(29, 146, 242, 0.3), 0 0 40px rgba(29, 146, 242, 0.1), inset 0 0 20px rgba(29, 146, 242, 0.05)",
+          },
+        },
         twinkle: {
           "0%, 100%": {
             opacity: "0.3",
@@ -121,6 +135,7 @@ export default {
         float: "float 6s ease-in-out infinite",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite alternate",
         twinkle: "twinkle 3s ease-in-out infinite",
+        "border-glow": "border-glow 4s ease-in-out infinite",
       },
     },
   },
