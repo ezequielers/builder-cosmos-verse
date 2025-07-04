@@ -1,4 +1,14 @@
-export default function Index() {
+import { useState } from "react";
+
+export default function SignUp() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    cpf: "",
+    acceptPolicy: false,
+  });
+
   return (
     <div className="min-h-screen w-full bg-black text-white relative overflow-hidden">
       {/* Full screen background container */}
@@ -71,7 +81,7 @@ export default function Index() {
             </div>
           </div>
 
-          {/* Background Image with Login Card Overlay */}
+          {/* Background Image with Sign Up Card Overlay */}
           <div
             className="relative w-full mt-8 sm:mt-[135px] px-4 sm:px-10 pb-2"
             style={{
@@ -82,19 +92,21 @@ export default function Index() {
               aspectRatio: "0.884",
             }}
           >
-            {/* Login Card */}
+            {/* Sign Up Card */}
             <div
               className="bg-white/[0.03] backdrop-blur-sm rounded-[33px] px-4 py-6 border border-brand-blue/30 relative w-full max-w-sm mx-auto animate-border-glow"
               style={{
                 background: "rgba(255, 255, 255, 0.03)",
                 border: "1px solid rgba(29, 146, 242, 0.4)",
+                marginTop: "-56px",
+                zIndex: 10,
               }}
             >
               {/* Logo */}
               <div className="flex justify-center mb-4">
                 <div className="w-14 h-14 rounded-full overflow-hidden">
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/409b62c2ded1c7c1e23880eed880d163217b69f7?placeholderIfAbsent=true&apiKey=18dae956f5b2411b871a2e3e8076440d"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/fc8cfca53adb66b3b9c9418de9b79a129b6ae610?placeholderIfAbsent=true"
                     alt="Logo"
                     className="w-full h-full object-cover"
                   />
@@ -106,85 +118,106 @@ export default function Index() {
                 Play responsibly, platform for over 18s only
               </div>
 
-              {/* Hello Button */}
-              <div className="mb-5">
+              {/* Name Field */}
+              <div className="mb-4">
                 <button
                   className="w-full border border-brand-blue rounded-full px-3 py-2 flex items-center gap-1.5 shadow-[0px_0px_2px_rgba(29,146,242,0.6)] hover:bg-brand-blue/10 transition-colors cursor-pointer"
-                  onClick={() => console.log("Hello button clicked")}
+                  onClick={() => console.log("Name field clicked")}
                 >
                   <span className="text-blue-100 text-sm font-medium">
-                    hello!
+                    Oliver Bennet
                   </span>
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/f76f2988ec98a5cb918a74260d7aa1698567d924?placeholderIfAbsent=true&apiKey=18dae956f5b2411b871a2e3e8076440d"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/b3cfde06dc9eb024947ade00c1220a3109295328?placeholderIfAbsent=true"
                     alt=""
                     className="w-px h-6"
                   />
                 </button>
               </div>
 
-              {/* Password Input */}
-              <div className="mb-3">
+              {/* Email Field */}
+              <div className="mb-4">
+                <button
+                  className="w-full bg-transparent border-0 rounded-full px-4 py-3 flex items-center justify-start hover:bg-white/5 transition-colors cursor-pointer"
+                  onClick={() => console.log("Email field clicked")}
+                >
+                  <span className="text-blue-100 text-sm">Email Address</span>
+                </button>
+              </div>
+
+              {/* Password Field */}
+              <div className="mb-4">
                 <button
                   className="w-full bg-transparent border-0 rounded-full px-4 py-3 flex items-center justify-between hover:bg-white/5 transition-colors cursor-pointer"
                   onClick={() => console.log("Password field clicked")}
                 >
-                  <span className="text-blue-100 text-sm">Enter password</span>
+                  <span className="text-blue-100 text-sm">Enter Password</span>
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/d4cccd715ae1fb10fbb63c19a891e60a0dccd5e6?placeholderIfAbsent=true&apiKey=18dae956f5b2411b871a2e3e8076440d"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/43a27eabf22d3e8627bd43ab35e3f7352c1704a7?placeholderIfAbsent=true"
                     alt=""
                     className="w-4 h-3 shadow-[0px_0px_7px_rgba(29,146,242,0.8)]"
                   />
                 </button>
               </div>
 
-              {/* Links Row */}
-              <div className="flex items-center justify-between mb-4 px-4">
+              {/* CPF Field */}
+              <div className="mb-7">
                 <button
-                  className="flex items-center space-x-1 hover:opacity-80 transition-opacity cursor-pointer"
-                  onClick={() => console.log("Crisr account clicked")}
+                  className="w-full bg-transparent border-0 rounded-full px-4 py-3 flex items-center justify-between hover:bg-white/5 transition-colors cursor-pointer"
+                  onClick={() => console.log("CPF field clicked")}
                 >
+                  <span className="text-blue-100 text-sm">CPF document</span>
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/1e98d278436a69cae13e30c34dc2b1f09d543e05?placeholderIfAbsent=true&apiKey=18dae956f5b2411b871a2e3e8076440d"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/04ca358fd0c7f01b89032ed5b420814422ef91a1?placeholderIfAbsent=true"
                     alt=""
-                    className="w-4 h-4 shadow-[0px_0px_7px_rgba(29,146,242,1)]"
+                    className="w-[18px] h-4 shadow-[0px_0px_11px_rgba(29,146,242,0.7)]"
                   />
-                  <span className="text-brand-blue text-xs">Crisr account</span>
-                </button>
-                <button
-                  className="text-blue-200 text-xs hover:opacity-80 transition-opacity cursor-pointer"
-                  onClick={() => console.log("Forgot password clicked")}
-                >
-                  Forgot password?
                 </button>
               </div>
 
-              {/* Login Button */}
+              {/* Privacy Policy Link */}
+              <div className="mb-6 px-4">
+                <button
+                  className="flex items-center space-x-1 hover:opacity-80 transition-opacity cursor-pointer"
+                  onClick={() => console.log("Privacy Policy clicked")}
+                >
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/7e7708e344128f728ccdcfe7ac375d765c15755d?placeholderIfAbsent=true"
+                    alt=""
+                    className="w-4 h-4 shadow-[0px_0px_7px_rgba(29,146,242,1)]"
+                  />
+                  <span className="text-brand-blue text-xs">
+                    Privacy Policy
+                  </span>
+                </button>
+              </div>
+
+              {/* Sign Up Button */}
               <div className="mb-6">
                 <button
                   className="w-full bg-brand-blue text-white rounded-[27px] py-3 px-8 font-medium text-[15px] shadow-[0px_-35px_10px_rgba(40,146,234,0)] hover:bg-brand-blue/90 transition-colors cursor-pointer"
                   style={{
                     background: "rgba(16, 134, 232, 1)",
                   }}
-                  onClick={() => console.log("Login button clicked")}
+                  onClick={() => console.log("Sign Up button clicked")}
                 >
-                  Login
+                  Sign Up
                 </button>
               </div>
 
-              {/* Sign Up Link */}
+              {/* Login Link */}
               <div className="text-center">
                 <span className="text-blue-200 text-xs">
-                  Don't have an account?{" "}
+                  Already have an account?{" "}
                 </span>
                 <button
                   className="text-brand-blue text-xs hover:opacity-80 transition-opacity cursor-pointer"
                   style={{
                     textShadow: "0px 0px 9px rgba(29, 146, 242, 0.8)",
                   }}
-                  onClick={() => (window.location.href = "/signup")}
+                  onClick={() => (window.location.href = "/")}
                 >
-                  Sign Up
+                  Login
                 </button>
               </div>
             </div>
