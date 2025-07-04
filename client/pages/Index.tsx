@@ -1,6 +1,7 @@
 export default function Index() {
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+    <div className="min-h-screen bg-black text-white relative overflow-hidden flex items-center justify-center">
+      <div className="w-full max-w-[480px] mx-auto relative">
       {/* Space Background */}
       <div className="absolute inset-0">
         {/* Animated particles */}
@@ -19,18 +20,9 @@ export default function Index() {
         </div>
 
         {/* Geometric shapes */}
-        <div
-          className="absolute top-1/4 left-1/4 w-32 h-32 md:w-40 md:h-40 border border-brand-blue/30 rounded-lg animate-float"
-          style={{ animationDelay: "0s" }}
-        />
-        <div
-          className="absolute top-3/4 right-1/4 w-24 h-24 md:w-32 md:h-32 border border-brand-blue/20 rounded-lg animate-float"
-          style={{ animationDelay: "2s" }}
-        />
-        <div
-          className="absolute bottom-1/4 left-1/3 w-40 h-40 md:w-48 md:h-48 border border-brand-blue/10 rounded-lg animate-float"
-          style={{ animationDelay: "4s" }}
-        />
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 md:w-40 md:h-40 border border-brand-blue/30 rounded-lg animate-float" style={{ animationDelay: "0s" }} />
+        <div className="absolute top-3/4 right-1/4 w-24 h-24 md:w-32 md:h-32 border border-brand-blue/20 rounded-lg animate-float" style={{ animationDelay: "2s" }} />
+        <div className="absolute bottom-1/4 left-1/3 w-40 h-40 md:w-48 md:h-48 border border-brand-blue/10 rounded-lg animate-float" style={{ animationDelay: "4s" }} />
 
         {/* Blue triangular accent */}
         <div className="absolute top-1/3 right-8">
@@ -45,20 +37,22 @@ export default function Index() {
       <div className="relative z-10 flex justify-between items-center px-4 sm:px-6 pt-3 pb-2">
         <div className="text-white font-semibold text-base">9:41</div>
         <div className="flex items-center space-x-2">
-          <div className="flex space-x-1">
-            <div className="w-1 h-3 bg-white rounded-full"></div>
-            <div className="w-1 h-3 bg-white rounded-full"></div>
-            <div className="w-1 h-3 bg-white rounded-full"></div>
-            <div className="w-1 h-3 bg-white/60 rounded-full"></div>
-          </div>
-          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="white">
-            <path d="M3 6h18l-2-2H5L3 6zm0 12h18l-2 2H5l-2-2zm16-8H5v4h14v-4z" />
-          </svg>
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/98037bc34dca25a19abb13f06345208558097df1?placeholderIfAbsent=true&apiKey=18dae956f5b2411b871a2e3e8076440d"
+            alt="Signal"
+            className="w-[18px] h-[27px]"
+          />
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/0f123edb983d29e5947e65c2a5195da722955a47?placeholderIfAbsent=true&apiKey=18dae956f5b2411b871a2e3e8076440d"
+            alt="WiFi"
+            className="w-[17px] h-[24px]"
+          />
           <div className="flex items-center">
-            <div className="w-6 h-3 border border-white/35 rounded-sm relative">
-              <div className="w-5 h-2 bg-white rounded-sm absolute top-0.5 left-0.5"></div>
-            </div>
-            <div className="text-xs ml-1">95</div>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/8de8b3e67346685c7799e92e44551fb99c7c7278?placeholderIfAbsent=true&apiKey=18dae956f5b2411b871a2e3e8076440d"
+              alt="Battery"
+              className="w-[28px] h-[13px]"
+            />
           </div>
         </div>
       </div>
@@ -71,21 +65,28 @@ export default function Index() {
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="relative z-10 flex-1 flex items-center justify-center px-6 sm:px-10 py-12 sm:py-20">
-        <div className="w-full max-w-sm mx-auto">
-          {/* Login Card */}
-          <div
-            className="bg-white/[0.03] backdrop-blur-sm rounded-[33px] p-4 border border-white/10"
-            style={{
-              background: "rgba(255, 255, 255, 0.03)",
-            }}
-          >
+      {/* Background Image with Login Card Overlay */}
+      <div
+        className="relative z-10 w-full mt-[135px] px-10 pb-2"
+        style={{
+          backgroundImage: "url('https://cdn.builder.io/api/v1/image/assets/TEMP/49d0f5ecc51bdd31675891f1d4e6293eebab806d?placeholderIfAbsent=true&apiKey=18dae956f5b2411b871a2e3e8076440d')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          aspectRatio: "0.884"
+        }}
+      >
+        {/* Login Card */}
+        <div
+          className="bg-white/[0.03] backdrop-blur-sm rounded-[33px] px-4 py-6 border border-white/10 relative"
+          style={{
+            background: "rgba(255, 255, 255, 0.03)",
+          }}
+        >
             {/* Logo */}
             <div className="flex justify-center mb-4">
               <div className="w-14 h-14 rounded-full overflow-hidden">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/660fb0523fed756a939ca9bca82f7c8d3bd9c518?placeholderIfAbsent=true"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/409b62c2ded1c7c1e23880eed880d163217b69f7?placeholderIfAbsent=true&apiKey=18dae956f5b2411b871a2e3e8076440d"
                   alt="Logo"
                   className="w-full h-full object-cover"
                 />
@@ -99,11 +100,15 @@ export default function Index() {
 
             {/* Hello Button */}
             <div className="mb-5">
-              <div className="border border-brand-blue rounded-full px-3 py-2 flex items-center justify-between shadow-[0px_0px_2px_rgba(29,146,242,0.6)]">
-                <span className="text-white text-sm font-medium ml-2">
+              <div className="border border-brand-blue rounded-full px-3 py-2 flex items-center gap-1.5 shadow-[0px_0px_2px_rgba(29,146,242,0.6)]">
+                <span className="text-white text-sm font-medium">
                   hello!
                 </span>
-                <div className="w-px h-6 bg-white/20"></div>
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/f76f2988ec98a5cb918a74260d7aa1698567d924?placeholderIfAbsent=true&apiKey=18dae956f5b2411b871a2e3e8076440d"
+                  alt=""
+                  className="w-px h-6"
+                />
               </div>
             </div>
 
@@ -111,30 +116,22 @@ export default function Index() {
             <div className="mb-3">
               <div className="bg-transparent border-0 rounded-full px-4 py-3 flex items-center justify-between">
                 <span className="text-white text-sm">Enter password</span>
-                <div className="w-4 h-4 bg-brand-blue rounded shadow-[0px_0px_7px_rgba(29,146,242,0.8)]">
-                  <svg
-                    viewBox="0 0 16 16"
-                    fill="white"
-                    className="w-full h-full"
-                  >
-                    <path d="M8 0C3.58 0 0 3.58 0 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm3.5 9H8.5v3.5c0 .28-.22.5-.5.5s-.5-.22-.5-.5V9H4.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5H7.5V4.5c0-.28.22-.5.5-.5s.5.22.5.5V8h3.5c.28 0 .5.22.5.5s-.22.5-.5.5z" />
-                  </svg>
-                </div>
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/d4cccd715ae1fb10fbb63c19a891e60a0dccd5e6?placeholderIfAbsent=true&apiKey=18dae956f5b2411b871a2e3e8076440d"
+                  alt=""
+                  className="w-4 h-3 shadow-[0px_0px_7px_rgba(29,146,242,0.8)]"
+                />
               </div>
             </div>
 
             {/* Links Row */}
             <div className="flex items-center justify-between mb-4 px-4">
               <div className="flex items-center space-x-1">
-                <div className="w-4 h-4 bg-brand-blue rounded shadow-[0px_0px_7px_rgba(29,146,242,1)]">
-                  <svg
-                    viewBox="0 0 16 16"
-                    fill="white"
-                    className="w-full h-full"
-                  >
-                    <path d="M8 0C3.58 0 0 3.58 0 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z" />
-                  </svg>
-                </div>
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/1e98d278436a69cae13e30c34dc2b1f09d543e05?placeholderIfAbsent=true&apiKey=18dae956f5b2411b871a2e3e8076440d"
+                  alt=""
+                  className="w-4 h-4 shadow-[0px_0px_7px_rgba(29,146,242,1)]"
+                />
                 <span className="text-brand-blue text-xs">Crisr account</span>
               </div>
               <span className="text-white text-xs">Forgot password?</span>
@@ -170,18 +167,10 @@ export default function Index() {
         </div>
       </div>
 
-      {/* Bottom Background Image */}
-      <div className="absolute bottom-0 right-0 z-0">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/6d1bb378b5e6fc137e567424f2897a445fd98688?placeholderIfAbsent=true"
-          alt="Background"
-          className="w-auto h-auto object-contain opacity-80"
-        />
-      </div>
-
       {/* Home Indicator */}
-      <div className="relative z-10 flex justify-center pb-2">
+      <div className="relative z-10 flex justify-center mt-[181px] pb-2">
         <div className="w-32 h-1 bg-white rounded-full"></div>
+      </div>
       </div>
     </div>
   );
