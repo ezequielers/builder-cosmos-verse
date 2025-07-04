@@ -231,7 +231,7 @@ export default function SignUp() {
                   style={{
                     background: "rgba(16, 134, 232, 1)",
                   }}
-                  onClick={() => console.log("Sign Up button clicked")}
+                  onClick={() => (window.location.href = "/home")}
                 >
                   Sign Up
                 </button>

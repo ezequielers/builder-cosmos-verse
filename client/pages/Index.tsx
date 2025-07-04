@@ -166,7 +166,7 @@ export default function Index() {
                   style={{
                     background: "rgba(16, 134, 232, 1)",
                   }}
-                  onClick={() => console.log("Login button clicked")}
+                  onClick={() => (window.location.href = "/home")}
                 >
                   Login
                 </button>
