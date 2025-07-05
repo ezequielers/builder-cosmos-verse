@@ -5,36 +5,33 @@ export default function Home() {
         {/* Header com informações do usuário */}
         <div className="flex items-center justify-between px-5 pt-16 pb-4">
           {/* Info do usuário */}
-          <div className="flex items-center gap-6">
-            <button
-              className="flex items-center gap-1.5 hover:opacity-80 transition-opacity"
-              onClick={() => console.log("Wallet clicked")}
-            >
-              {/* Nome e valor */}
-              <div>
-                <div className="text-white text-sm font-medium">
-                  Oliver Bennet
-                </div>
-                <div className="text-white text-xs">$37,657.00</div>
+          <button
+            className="flex items-center gap-1.5 hover:opacity-80 transition-opacity"
+            onClick={() => console.log("Wallet clicked")}
+          >
+            {/* Nome e valor */}
+            <div>
+              <div className="text-white text-sm font-medium">
+                Oliver Bennet
               </div>
-              {/* Ícone + */}
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/36a75653a2eacb072809c140a3a6180561d90510?placeholderIfAbsent=true"
-                alt="Add"
-                className="w-5 h-5"
-              />
-            </button>
-            {/* Logo Starz centralizado */}
-            <button
-              className="hover:opacity-80 transition-opacity"
-              onClick={() => console.log("Logo clicked")}
-            >
-              <div className="flex items-center gap-2">
-                <div className="text-2xl">⭐</div>
-                <span className="text-white text-xl font-bold">starz</span>
-              </div>
-            </button>
-          </div>
+              <div className="text-white text-xs">$37,657.00</div>
+            </div>
+            {/* Ícone + */}
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/36a75653a2eacb072809c140a3a6180561d90510?placeholderIfAbsent=true"
+              alt="Add"
+              className="w-5 h-5"
+            />
+          </button>
+
+          {/* Logo Starz centralizado */}
+          <button
+            className="hover:opacity-80 transition-opacity"
+            onClick={() => console.log("Logo clicked")}
+          >
+            <span className="text-white text-xl font-bold">starz</span>
+          </button>
+
           {/* Avatar do usuário */}
           <button
             className="hover:opacity-80 transition-opacity"
@@ -211,8 +208,8 @@ export default function Home() {
               </div>
 
               {/* Carrossel de jogos populares */}
-              <div className="w-full h-[102px] overflow-x-auto">
-                <div className="flex px-5 items-center gap-2 w-[1200px] h-[102px]">
+              <div className="w-full h-[102px] overflow-x-auto scrollbar-hide">
+                <div className="flex px-5 items-center gap-2 w-[800px] h-[102px]">
                   {/* Meet Cody Card */}
                   <button
                     className="w-[262px] h-[102px] rounded-[18px] relative bg-gradient-to-r from-[#fea43e] to-[#ff6b35] hover:opacity-90 transition-opacity flex-shrink-0"
@@ -293,46 +290,6 @@ export default function Home() {
                         </span>
                       </div>
                     </div>
-                  </button>
-
-                  {/* Zirk A Event Card */}
-                  <button
-                    className="w-[262px] h-[102px] rounded-[18px] relative bg-[#1b6598] hover:opacity-90 transition-opacity flex-shrink-0"
-                    onClick={() => console.log("Zirk A Event clicked")}
-                  >
-                    {/* Blur effects */}
-                    <div className="absolute -left-10 -top-8 w-[91px] h-[91px] rounded-full bg-[#644A79] blur-[23px] opacity-60" />
-                    <div className="absolute right-0 top-5 w-[137px] h-[137px] rounded-full bg-[#C9A2CF] blur-[33px] opacity-60" />
-
-                    <div className="absolute left-4 top-8 flex flex-col items-start gap-0.5 w-[104px]">
-                      <div className="text-white text-[18px] font-bold leading-none">
-                        ZIRK A EVENT
-                      </div>
-                      <div className="flex items-center gap-0.5 w-full">
-                        <span className="text-white/50 text-[11px] font-medium">
-                          Most engage
-                        </span>
-                        <span className="text-white text-[11px] font-semibold">
-                          Host
-                        </span>
-                      </div>
-                    </div>
-
-                    <img
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/09d962cca45219bbfc65c846c00cd643ba9b8652?width=112"
-                      alt="Person 1"
-                      className="absolute left-[163px] top-[18px] w-[56px] h-[65px] object-cover"
-                    />
-                    <img
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/2f9e7a756884184da59bd95a23154412581daec3?width=85"
-                      alt="Person 2"
-                      className="absolute left-[169px] top-[87px] w-[43px] h-auto object-cover"
-                    />
-                    <img
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/b3d6f53c812b0b04c1a21b66062d835030a938c6?width=85"
-                      alt="Person 3"
-                      className="absolute left-[169px] -top-[28px] w-[43px] h-auto object-cover"
-                    />
                   </button>
                 </div>
               </div>
