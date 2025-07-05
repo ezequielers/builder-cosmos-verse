@@ -7,7 +7,10 @@ export default function Home() {
         <div className="flex items-center justify-between px-5 pt-16 pb-4">
           {/* Info do usuário */}
           <div className="flex items-center gap-6">
-            <div className="flex items-center gap-1.5">
+            <button
+              className="flex items-center gap-1.5 hover:opacity-80 transition-opacity"
+              onClick={() => console.log("Wallet clicked")}
+            >
               {/* Nome e valor */}
               <div>
                 <div className="text-white text-sm font-medium">
@@ -21,35 +24,73 @@ export default function Home() {
                 alt="Add"
                 className="w-5 h-5"
               />
-            </div>
+            </button>
             {/* Logo Starz */}
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/068a262e4e1c39345b4089ac9bce61d6724b5a20?placeholderIfAbsent=true"
-              alt="Starz Logo"
-              className="w-16 h-10"
-            />
+            <button
+              className="hover:opacity-80 transition-opacity"
+              onClick={() => console.log("Logo clicked")}
+            >
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/068a262e4e1c39345b4089ac9bce61d6724b5a20?placeholderIfAbsent=true"
+                alt="Starz Logo"
+                className="w-16 h-10"
+              />
+            </button>
           </div>
           {/* Avatar do usuário */}
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/d9abfbeea575d8eb1f04c7feb67db1b93c5562a3?placeholderIfAbsent=true"
-            alt="User Avatar"
-            className="w-12 h-12 rounded-full"
-          />
+          <button
+            className="hover:opacity-80 transition-opacity"
+            onClick={() => console.log("Profile clicked")}
+          >
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/d9abfbeea575d8eb1f04c7feb67db1b93c5562a3?placeholderIfAbsent=true"
+              alt="User Avatar"
+              className="w-12 h-12 rounded-full"
+            />
+          </button>
         </div>
 
         {/* Seção Games made for you */}
-        <div className="px-5 mb-5">
-          <div className="flex items-center gap-1 mb-4">
-            <span className="text-white text-base font-medium">Games</span>
-            <span className="text-white text-base font-medium">
-              made for you
-            </span>
+        <div className="mb-5">
+          <div className="flex items-center justify-between px-5 mb-4">
+            <div className="flex items-center gap-1">
+              <span className="text-white text-base font-medium">Games</span>
+              <span className="text-white text-base font-medium">
+                made for you
+              </span>
+            </div>
+            <div className="flex gap-2">
+              <button
+                className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
+                onClick={() => {
+                  const container = document.getElementById("games-carousel");
+                  container?.scrollBy({ left: -200, behavior: "smooth" });
+                }}
+              >
+                <span className="text-white text-sm">‹</span>
+              </button>
+              <button
+                className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
+                onClick={() => {
+                  const container = document.getElementById("games-carousel");
+                  container?.scrollBy({ left: 200, behavior: "smooth" });
+                }}
+              >
+                <span className="text-white text-sm">›</span>
+              </button>
+            </div>
           </div>
 
-          {/* Scroll horizontal dos jogos */}
-          <div className="flex gap-2 overflow-x-auto scrollbar-hide">
+          {/* Carrossel dos jogos */}
+          <div
+            id="games-carousel"
+            className="flex gap-2 overflow-x-auto scrollbar-hide px-5"
+          >
             {/* Game Card 1 - Roxz */}
-            <div className="relative flex-shrink-0">
+            <button
+              className="relative flex-shrink-0 hover:scale-105 transition-transform"
+              onClick={() => console.log("Roxz game clicked")}
+            >
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/21cb7445f9469fee276208583612f75d26db352c?placeholderIfAbsent=true"
                 alt="Roxz"
@@ -60,10 +101,13 @@ export default function Home() {
                   Roxz
                 </div>
               </div>
-            </div>
+            </button>
 
             {/* Game Card 2 - Lynx */}
-            <div className="relative flex-shrink-0">
+            <button
+              className="relative flex-shrink-0 hover:scale-105 transition-transform"
+              onClick={() => console.log("Lynx game clicked")}
+            >
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe1e0004cc859dde75bf385ba11fe99ecb50c37a?placeholderIfAbsent=true"
                 alt="Lynx"
@@ -74,10 +118,13 @@ export default function Home() {
                   Lynx
                 </div>
               </div>
-            </div>
+            </button>
 
             {/* Game Card 3 - Zyra */}
-            <div className="relative flex-shrink-0">
+            <button
+              className="relative flex-shrink-0 hover:scale-105 transition-transform"
+              onClick={() => console.log("Zyra game clicked")}
+            >
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/abb77a4d8783ef5f04174aec94e09da538e71b26?placeholderIfAbsent=true"
                 alt="Zyra"
@@ -88,10 +135,13 @@ export default function Home() {
                   Zyra
                 </div>
               </div>
-            </div>
+            </button>
 
             {/* Game Card 4 - Fynn */}
-            <div className="relative flex-shrink-0">
+            <button
+              className="relative flex-shrink-0 hover:scale-105 transition-transform"
+              onClick={() => console.log("Fynn game clicked")}
+            >
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/a964e2a4efe827b9b437995640366d190783af69?placeholderIfAbsent=true"
                 alt="Fynn"
@@ -102,10 +152,13 @@ export default function Home() {
                   Fynn
                 </div>
               </div>
-            </div>
+            </button>
 
             {/* Game Card 5 - Juno */}
-            <div className="relative flex-shrink-0">
+            <button
+              className="relative flex-shrink-0 hover:scale-105 transition-transform"
+              onClick={() => console.log("Juno game clicked")}
+            >
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/a8788b977ae95a4370ef42b36f52d007bd432ae2?placeholderIfAbsent=true"
                 alt="Juno"
@@ -116,10 +169,13 @@ export default function Home() {
                   Juno
                 </div>
               </div>
-            </div>
+            </button>
 
             {/* Game Card 6 - Kira */}
-            <div className="relative flex-shrink-0">
+            <button
+              className="relative flex-shrink-0 hover:scale-105 transition-transform"
+              onClick={() => console.log("Kira game clicked")}
+            >
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/50070c4b8ca8b4fdf696649e19628dbd1db64569?placeholderIfAbsent=true"
                 alt="Kira"
@@ -130,10 +186,13 @@ export default function Home() {
                   Kira
                 </div>
               </div>
-            </div>
+            </button>
 
             {/* Game Card 7 - Milo */}
-            <div className="relative flex-shrink-0">
+            <button
+              className="relative flex-shrink-0 hover:scale-105 transition-transform"
+              onClick={() => console.log("Milo game clicked")}
+            >
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/9c77453a0cf0f5a62f6442dec9033e1afb864e96?placeholderIfAbsent=true"
                 alt="Milo"
@@ -144,7 +203,7 @@ export default function Home() {
                   Milo
                 </div>
               </div>
-            </div>
+            </button>
           </div>
         </div>
 
@@ -157,39 +216,83 @@ export default function Home() {
                 popular games
               </span>
             </div>
-            <span className="text-white text-base">See all</span>
+            <button
+              className="text-white text-base hover:text-brand-blue transition-colors"
+              onClick={() => console.log("See all popular games clicked")}
+            >
+              See all
+            </button>
           </div>
 
           {/* Popular Games Grid */}
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/b22a230e4726ea6ecfb21adfa57fdb45a6a93647?placeholderIfAbsent=true"
-            alt="Popular Games"
-            className="w-full h-auto"
-          />
+          <button
+            className="w-full hover:opacity-90 transition-opacity"
+            onClick={() => console.log("Popular games grid clicked")}
+          >
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/b22a230e4726ea6ecfb21adfa57fdb45a6a93647?placeholderIfAbsent=true"
+              alt="Popular Games"
+              className="w-full h-auto"
+            />
+          </button>
         </div>
 
         {/* Seção Crash Games */}
         <div className="px-5 mb-5">
-          <div className="flex items-center gap-1 mb-4">
-            <span className="text-white text-base font-medium">Crash</span>
-            <span className="text-white text-base font-medium">Games</span>
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-1">
+              <span className="text-white text-base font-medium">Crash</span>
+              <span className="text-white text-base font-medium">Games</span>
+            </div>
+            <div className="flex gap-2">
+              <button
+                className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
+                onClick={() => {
+                  const container = document.getElementById("crash-carousel");
+                  container?.scrollBy({ left: -200, behavior: "smooth" });
+                }}
+              >
+                <span className="text-white text-sm">‹</span>
+              </button>
+              <button
+                className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
+                onClick={() => {
+                  const container = document.getElementById("crash-carousel");
+                  container?.scrollBy({ left: 200, behavior: "smooth" });
+                }}
+              >
+                <span className="text-white text-sm">›</span>
+              </button>
+            </div>
           </div>
 
-          {/* Crash Games Image */}
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/38d554a47656c3c20d2165e76c0cfb0f1707b2f7?placeholderIfAbsent=true"
-            alt="Crash Games"
-            className="w-full h-auto"
-          />
+          {/* Crash Games Carousel */}
+          <div id="crash-carousel" className="overflow-x-auto scrollbar-hide">
+            <button
+              className="w-full hover:opacity-90 transition-opacity"
+              onClick={() => console.log("Crash games clicked")}
+            >
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/38d554a47656c3c20d2165e76c0cfb0f1707b2f7?placeholderIfAbsent=true"
+                alt="Crash Games"
+                className="w-full h-auto"
+              />
+            </button>
+          </div>
         </div>
 
         {/* Bottom Navigation */}
         <div className="w-full mb-4">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/596a9800c458304b539c67704e2608688ca4db8a?placeholderIfAbsent=true"
-            alt="Bottom Navigation"
-            className="w-full h-auto"
-          />
+          <button
+            className="w-full hover:opacity-90 transition-opacity"
+            onClick={() => console.log("Bottom navigation clicked")}
+          >
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/596a9800c458304b539c67704e2608688ca4db8a?placeholderIfAbsent=true"
+              alt="Bottom Navigation"
+              className="w-full h-auto"
+            />
+          </button>
         </div>
 
         {/* Home Indicator */}
