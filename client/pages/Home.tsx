@@ -2,25 +2,58 @@ export default function Home() {
   return (
     <div className="min-h-screen w-full bg-black text-white relative overflow-hidden">
       <div className="w-full relative">
-        {/* Header com logo centralizado */}
-        <div className="flex justify-center pt-16 pb-4">
+        {/* Header com informações do usuário */}
+        <div className="flex items-center justify-between px-5 pt-16 pb-4">
+          {/* Info do usuário */}
+          <div className="flex items-center gap-6">
+            <button
+              className="flex items-center gap-1.5 hover:opacity-80 transition-opacity"
+              onClick={() => console.log("Wallet clicked")}
+            >
+              {/* Nome e valor */}
+              <div>
+                <div className="text-white text-sm font-medium">
+                  Oliver Bennet
+                </div>
+                <div className="text-white text-xs">$37,657.00</div>
+              </div>
+              {/* Ícone + */}
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/36a75653a2eacb072809c140a3a6180561d90510?placeholderIfAbsent=true"
+                alt="Add"
+                className="w-5 h-5"
+              />
+            </button>
+            {/* Logo Starz centralizado */}
+            <button
+              className="hover:opacity-80 transition-opacity"
+              onClick={() => console.log("Logo clicked")}
+            >
+              <div className="flex items-center gap-2">
+                <div className="text-2xl">⭐</div>
+                <span className="text-white text-xl font-bold">starz</span>
+              </div>
+            </button>
+          </div>
+          {/* Avatar do usuário */}
           <button
             className="hover:opacity-80 transition-opacity"
-            onClick={() => console.log("Logo clicked")}
+            onClick={() => console.log("Profile clicked")}
           >
-            <div className="flex items-center gap-2">
-              <div className="text-2xl">⭐</div>
-              <span className="text-white text-xl font-bold">starz</span>
-            </div>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/d9abfbeea575d8eb1f04c7feb67db1b93c5562a3?placeholderIfAbsent=true"
+              alt="User Avatar"
+              className="w-12 h-12 rounded-full"
+            />
           </button>
         </div>
 
-        {/* Content Container com padding-top */}
-        <div className="w-full" style={{ paddingTop: "146px" }}>
-          <div className="w-full pb-5 flex flex-col items-center gap-8">
+        {/* Content Container */}
+        <div className="w-full">
+          <div className="w-full pb-5 flex flex-col gap-8">
             {/* Seção Games made for you */}
-            <div className="w-full relative h-[131px]">
-              <div className="absolute left-5 top-0 flex items-center gap-0.5">
+            <div className="w-full">
+              <div className="px-5 mb-4 flex items-center gap-0.5">
                 <span className="text-white text-base font-medium">Games</span>
                 <span className="text-white/60 text-base font-medium">
                   made for you
@@ -28,8 +61,8 @@ export default function Home() {
               </div>
 
               {/* Carrossel horizontal */}
-              <div className="absolute left-5 top-8 w-full h-[98px] overflow-x-auto">
-                <div className="flex pr-5 items-center gap-2 w-[670px] h-[98px]">
+              <div className="w-full h-[98px] overflow-x-auto">
+                <div className="flex px-5 items-center gap-2 w-[670px] h-[98px]">
                   {/* Game Cards */}
                   <button
                     className="relative flex-shrink-0 hover:scale-105 transition-transform"
@@ -161,8 +194,8 @@ export default function Home() {
             </div>
 
             {/* Seção Most Popular Games */}
-            <div className="w-full flex flex-col items-center gap-3.5">
-              <div className="flex w-[335px] justify-between items-center">
+            <div className="w-full">
+              <div className="px-5 mb-4 flex justify-between items-center">
                 <div className="flex items-center gap-0.5">
                   <span className="text-white text-base font-medium">Most</span>
                   <span className="text-white/60 text-base font-medium">
@@ -177,13 +210,12 @@ export default function Home() {
                 </button>
               </div>
 
-              {/* Grid de jogos populares */}
-              <div className="w-full h-[214px] relative">
-                {/* Primeira linha */}
-                <div className="absolute left-5 top-0 flex items-center gap-2 w-[534px] h-[102px]">
+              {/* Carrossel de jogos populares */}
+              <div className="w-full h-[102px] overflow-x-auto">
+                <div className="flex px-5 items-center gap-2 w-[1200px] h-[102px]">
                   {/* Meet Cody Card */}
                   <button
-                    className="w-[262px] h-[102px] rounded-[18px] relative bg-gradient-to-r from-[#fea43e] to-[#ff6b35] hover:opacity-90 transition-opacity"
+                    className="w-[262px] h-[102px] rounded-[18px] relative bg-gradient-to-r from-[#fea43e] to-[#ff6b35] hover:opacity-90 transition-opacity flex-shrink-0"
                     onClick={() => console.log("Meet Cody clicked")}
                   >
                     {/* Blur effects */}
@@ -213,7 +245,7 @@ export default function Home() {
 
                   {/* Zirk A Stream Card */}
                   <button
-                    className="w-[262px] h-[102px] rounded-[18px] relative hover:opacity-90 transition-opacity"
+                    className="w-[262px] h-[102px] rounded-[18px] relative hover:opacity-90 transition-opacity flex-shrink-0"
                     onClick={() => console.log("Zirk A Stream clicked")}
                   >
                     <img
@@ -236,13 +268,10 @@ export default function Home() {
                       </div>
                     </div>
                   </button>
-                </div>
 
-                {/* Segunda linha */}
-                <div className="absolute -left-[95px] top-28 flex items-center gap-2 w-[534px] h-[102px]">
                   {/* Card 3 */}
                   <button
-                    className="w-[262px] h-[102px] rounded-[18px] relative hover:opacity-90 transition-opacity"
+                    className="w-[262px] h-[102px] rounded-[18px] relative hover:opacity-90 transition-opacity flex-shrink-0"
                     onClick={() => console.log("Card 3 clicked")}
                   >
                     <img
@@ -268,7 +297,7 @@ export default function Home() {
 
                   {/* Zirk A Event Card */}
                   <button
-                    className="w-[262px] h-[102px] rounded-[18px] relative bg-[#1b6598] hover:opacity-90 transition-opacity"
+                    className="w-[262px] h-[102px] rounded-[18px] relative bg-[#1b6598] hover:opacity-90 transition-opacity flex-shrink-0"
                     onClick={() => console.log("Zirk A Event clicked")}
                   >
                     {/* Blur effects */}
@@ -310,16 +339,16 @@ export default function Home() {
             </div>
 
             {/* Seção Crash Games */}
-            <div className="w-full flex flex-col items-start gap-5">
-              <div className="absolute left-5 flex items-center gap-1">
+            <div className="w-full">
+              <div className="px-5 mb-4 flex items-center gap-1">
                 <span className="text-white text-base font-medium">Crash</span>
                 <span className="text-white/50 text-base font-medium">
                   Games
                 </span>
               </div>
 
-              <div className="w-full h-[117px] relative">
-                <div className="absolute left-5 top-8 flex pr-5 items-center gap-4 w-[704px] h-[84px] overflow-x-auto">
+              <div className="w-full h-[84px] overflow-x-auto">
+                <div className="flex px-5 items-center gap-4 w-[704px] h-[84px]">
                   {/* Círculos com imagens dos jogos crash */}
                   <button
                     className="w-[84px] h-[84px] rounded-full bg-gray-400 hover:scale-105 transition-transform"
@@ -366,8 +395,8 @@ export default function Home() {
             </div>
 
             {/* Seção Fantasy Sport */}
-            <div className="w-full flex flex-col items-start gap-5">
-              <div className="absolute left-5 flex items-center gap-1">
+            <div className="w-full">
+              <div className="px-5 mb-4 flex items-center gap-1">
                 <span className="text-white text-base font-medium">
                   Fantasy
                 </span>
@@ -376,8 +405,8 @@ export default function Home() {
                 </span>
               </div>
 
-              <div className="w-full h-[131px] relative">
-                <div className="absolute left-5 top-8 flex pr-5 items-center gap-2 w-[670px] h-[98px] overflow-x-auto">
+              <div className="w-full h-[98px] overflow-x-auto">
+                <div className="flex px-5 items-center gap-2 w-[670px] h-[98px]">
                   {/* Repetindo os mesmos cards da primeira seção */}
                   <button
                     className="relative flex-shrink-0 hover:scale-105 transition-transform"
