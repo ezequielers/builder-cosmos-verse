@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <div className="min-h-screen w-full bg-black text-white relative overflow-hidden">
       {/* Container principal */}
-      <div className="w-full max-w-[480px] mx-auto relative">
+      <div className="w-full relative">
         {/* Header com informações do usuário */}
         <div className="flex items-center justify-between px-5 pt-16 pb-4">
           {/* Info do usuário */}
@@ -184,7 +184,7 @@ export default function Home() {
         </div>
 
         {/* Bottom Navigation */}
-        <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-[480px]">
+        <div className="w-full mb-4">
           <img
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/596a9800c458304b539c67704e2608688ca4db8a?placeholderIfAbsent=true"
             alt="Bottom Navigation"
@@ -193,7 +193,7 @@ export default function Home() {
         </div>
 
         {/* Home Indicator */}
-        <div className="fixed bottom-2 left-1/2 transform -translate-x-1/2">
+        <div className="flex justify-center pb-4">
           <div className="w-32 h-1 bg-white rounded-full"></div>
         </div>
       </div>
